@@ -10,7 +10,7 @@ function validar() {
     }
 
     // Llamada al servicio web en AwardSpace
-    fetch(`http://validacedula.atwebpages.com/servicio.php?cedula=${cedula}`)
+    fetch(`https://validacedula.atwebpages.com/servicio.php?cedula=${cedula}`)
         .then(res => res.json())
         .then(data => {
             if (data.valida) {
@@ -40,4 +40,5 @@ function limpiar() {
     document.getElementById("cedula").value = "";
     document.getElementById("resultado").innerHTML = "";
 }
+
 
