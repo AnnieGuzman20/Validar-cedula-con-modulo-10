@@ -5,6 +5,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  
 
+@app.route("/")
+def home():
+    return send_from_directory("", "index.html") 
+
 def validar_cedula(cedula):
     if len(cedula) != 11 or not cedula.isdigit():
         return False
@@ -28,4 +32,5 @@ def validar():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+
 
