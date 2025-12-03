@@ -8,7 +8,7 @@ async function validar() {
   }
 
   try {
-    const url = `http://servicioweb-modulo10.infinityfree.me/validarCedula.php?cedula=${cedula}`;
+    const url = `https://servicioweb-modulo10.infinityfree.me/validarCedula.php?cedula=${cedula}`;
 
     const respuesta = await fetch(url);
     const data = await respuesta.json();
@@ -19,3 +19,4 @@ async function validar() {
     resultado.textContent = "⚠️ Error al conectar con el servicio web";
   }
 }
+
